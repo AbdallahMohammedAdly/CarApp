@@ -1,6 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import Navbar from "./_Components/Navbar";
+import Hero from "./_Components/hero";
+import Fiilter from "./_Components/Fiilter";
+import Carcard from "./_Components/Carcard";
+import ReserveCard from "./_Components/ReserveCard";
+import Footer from "./_Components/Footer";
+import ConsultantCard from "./_Components/ConsultantCard";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,12 +23,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        
+
+        <Navbar />
+        <Hero/>
+        <div className="translate-y-[-50px]">
+        <Fiilter/>
+
+        </div>
+        <Carcard/>
+        <ReserveCard />
+        <ConsultantCard />
         {children}
+        <Footer />
       </body>
     </html>
   );
