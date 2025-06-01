@@ -6,10 +6,10 @@ import { FaChevronLeft } from "react-icons/fa6";
 import img from 'next/image'
 const Hero = () => {
      const images = [
-    "/1745849978-264.webp",
-    "/1747554914-69.webp",
-    "/1747573408-800.webp",
-    "/1747655287-945.webp",
+    "/public/1745849978-264.webp",
+    "/public/1747554914-69.webp",
+    "/public/1747573408-800.webp",
+    "/public/1747655287-945.webp",
   ];
    const [currentSlide, setCurrentSlide] = useState(0);
 
